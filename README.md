@@ -9,10 +9,9 @@
 
   
 ### Requisitos
-- Python 3.x
-- Django 3.x o superior
+- Python 3.x o superior.
+- Django 3.x o superior.
 
-- Eliminar: Permite eliminar elementos de la base de datos.
 
 Requisitos
 
