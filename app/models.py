@@ -14,7 +14,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField()
     descripcion = models.TextField()
-    color = models.CharField(max_length=50, null=True)
+    
     imagen = models.ImageField(upload_to="productos", null=True)
     
     def __str__(self):

@@ -38,7 +38,7 @@
                 <thead>
                     <tr>
                     <th>Nombre</th>
-                    <th>Marca</th>
+                    <th>Tipo</th>
                     <th>Precio</th>
                     <th>Descripcion</th>
 
@@ -51,7 +51,7 @@
                     {% for p in productos %}
                     <tr>
                     <td>{{ p.nombre | title }}</td>
-                    <td>{{ p.marca | title }}</td>
+                    <td>{{ p.tipo | title }}</td>
                     <td>{{ p.precio | intcomma }}</td>
                     <td>{{ p.descripcion }}</td>
                     <td>

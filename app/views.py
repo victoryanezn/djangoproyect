@@ -111,7 +111,7 @@ def registro(request):
 
 # -----------------------------------feedbacks
 
-@permission_required('app.add_feedback')
+@login_required
 def agregar_feedback(request):
     data={
         'form':FeedbacksForm()
