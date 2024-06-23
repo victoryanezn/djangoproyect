@@ -16,7 +16,7 @@
 
 Requisitos
 
-- Python 3.x
+- Python 
 - Django 3.x o superior
 
 ## Instalación
@@ -31,7 +31,7 @@ Requisitos
   ```
 - **3. Crea un entorno virtual:**
   ```bash
-    python3 -m venv env
+    py -m venv env
   ```
 - **4. Activa el entorno virtual:**
   
