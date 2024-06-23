@@ -1,0 +1,111 @@
+
+
+
+
+{% extends 'app/base.html'%}
+
+{% load static%}
+{% block js%}
+
+{%endblock%}
+
+{% block css%}
+
+{%endblock%}
+
+{% load humanize %}
+
+{%block contenido%}
+<style>
+    .card {
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .feedback-author {
+        font-style: italic;
+        color: #000000;
+    }
+
+    .feedback-date {
+        color: #000000;
+    }
+
+    .text-center h5 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .text-center h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .text-center p {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+
+    .container {
+        padding: 20px;
+    }
+</style>
+<div class="container img-reglas">
+    <div>
+        <a href="#">
+            <img src="{% static 'app/img/logos/feedbacks.png' %}" class="img-fluid " alt="img-reglas">
+        </a>
+    </div>
+    
+    {% if user.is_authenticated %}
+    <a href="{% url 'agregar_feedback' %}">
+        <button>crear una reseña</button>
+    </a>
+    {% endif %}
+</div>
+<div class="container px-4 px-lg-5 mt-5 ">
+    <div class="row gx-4 gx-lg-5 row-cols-12 row-cols-md-12 justify-content-center">
+        {% for p in feedbacks %}
+        <div class=" mb-5">
+            <div class="card h-100 text-BLACK" id="card-fondo">
+
+                <div class="card-body">
+                    <div class="text-center">
+                        <h4>{{ p.titulo | title }}</h4>
+                        <hr>    
+                        <p> {{ p.descripcion }} </p>
+                        <hr>
+                        <p class="feedback-author"><em>@{{ p.autor }}</em></p>
+                        <p class="feedback-date">{{ p.fecha_creado }}</p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+{%endblock%}
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}

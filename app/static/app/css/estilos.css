@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+}
+
+
+
+
+.navbar-dark {
+    background-color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#pag-principal{
+    background-color:#000000;
+}
+
+#footer{
+    background: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+.carrusel{
+    width: 1000px;
+
+}
+.carruselc{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+
+}
+
+#card-fondo{
+    border-radius: 5px;
+    border: 1px solid #0033ff;
+
+}
+
+.card-img-top{
+    border: 1px solid #000000;
+    border-radius: 5px;
+    
+    
+
+}
+body {
+    background: #000000 url("../img/fondominecraft.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color:#000000!important;
+} 
+
+
+
+/* #quien-soy{
+    margin-top: white;
+} */
+
+
+.titulo{
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+.parrafo{
+    font-size: 20px;
+    font-style: italic;
+    color:rgb(255, 255, 255);
+}
+
+.d-block img {
+
+    width: 100%;
+    
+}
+.alinear{
+    display: flex;
+    justify-content: right;
+
+}
+
+/* styles.css */
+/* #menu-principal{
+    display: flex;
+    justify-content: center;
+
+
+} */
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #000000; /* Light background for contrast */
+}
+
+.navbar {
+    background-color: #000000; /* Black background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-link {
+    font-family: 'Kanit', sans-serif;
+    color: #000000;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+
+    text-shadow: 0 0 14px #0044ff; /* Neon green glow effect */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+
+
+/* For better spacing and alignment */
+.nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.formu{
+    background: linear-gradient( rgb(198, 198, 198), 10%, rgb(209, 209, 209));
+    box-shadow: 12px 12px 12px #0044ff;
+    border-radius: 20px;
+    padding: 25px;
+
+    
+}
+.a2{
+    color: #000dff;
+    text-decoration:none;
+
+}
+.a2:hover{
+    color: #0000ff;
+    text-shadow: 0 0 14px #0044ff;
+
+}
+/* .img-reglas{
+    width: 500px;
+
+
+
+} */
+
+/* Estilos generales del contenedor */
+.containerreglas {
+    max-width: 800px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Estilos para la imagen principal */
+.img-reglas img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.btn{
+    margin: 10px;
+    border: 1px solid #000000;
+
+}
+.img-reglas {
+    width: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el acordeón */
+.accordion-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    font-weight: bold;
+    border: none;
+    border-radius: 0; /* Sin bordes redondeados para los botones */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #007bff;
+    background-color: #e7f1ff; /* Fondo claro cuando está expandido */
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Bordes redondeados para los items */
+    overflow: hidden; /* Para las transiciones suaves */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el efecto de profundidad */
+}
+
+.accordion-body {
+    background-color: #f8f9fa; /* Fondo gris claro para el contenido */
+    color: #333; /* Color del texto */
+    border-top: 1px solid #ddd; /* Borde superior */
+    padding: 15px; /* Espacio interno */
+}
+
+/* Efecto hover para los botones */
+.accordion-button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+    color: #ffffff; /* Color del texto del botón al pasar el cursor */
+}
+
+/* aca termina acordeon */
+
+
+
+
+
+
+
+/* app/css/estilos.css */
+
+/* Estilos para el contenedor de feedbacks */
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+    #logo-principal img {
+        width: auto;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #logo-principal img {
+        
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:0px) {
+    #Paya img {
+        width: 200px;
+        height: 200px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:576px) {
+    #Paya img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #Paya img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #Paya img {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (min-width:0px) {
+    #texto-paya {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width:576px) {
+    #texto-paya {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    #texto-paya {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width:0px) {
+    .responsive-video iframe{
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media screen and (min-width:560px) {
+    .responsive-video iframe{
+        justify-content: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;       
+        margin: auto; 
+        width: 560px;
+        height: 315px;
+    }
+}
+
+@media (min-width:0px) {
+    #redes {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width:0px) {
+    #redes {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+#foto-contacto{
+    
+    display: block;
+    margin: 20px;
+    width: 400px;
+    height: auto;
+}
+
+#parrafo-contacto{
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+
+
+.nav-item{
+    color: #ffffff;
+    background-color: #000;
+    border-radius: 7px;
+    padding: 2px;
+    margin: 2px;
+}
+.dropdown-menu{
+    padding: 5px;
+    margin: 5px;
+    background-color: #636363;
+    border-radius: 20px;
+}
+
+/* ----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- */

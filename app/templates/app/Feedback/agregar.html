@@ -1,0 +1,46 @@
+{% extends 'app/base.html' %}
+
+
+
+{% load crispy_forms_tags %}
+{% block contenido %}
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="formu">
+                <div class="card-body ">
+                    <h2 class="text-dark text-center">Nuevo Feedback</h2>
+                    <hr class="text-dark">
+                    <br>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class=" d-flex text-center justify-content-end">
+                            <input type="reset" value="Limpiar" class="btn btn-light">
+                            &nbsp;
+                            <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+                            
+                            &nbsp;
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                        </div>
+                    </form>
+                    {{mensaje}}
+                </div>  
+            </div>
+
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+{% endblock %}
+
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}

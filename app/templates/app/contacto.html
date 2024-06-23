@@ -1,0 +1,50 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{%block js%}
+
+{%endblock%}
+
+{%block css%}
+<link rel="stylesheet" href="{% static 'app/css/estilos.css'%}">
+<link rel="stylesheet" href="{% static 'app/css/estilo_form.css'%}">
+{%endblock%}
+
+{% block contenido%}
+
+{% load crispy_forms_tags %}
+<br>
+<br>
+<div class="container  mt-5 pt-5">
+    <div class="row">
+        <div class="col-md-5  text-white text-md-start" id="contactame">
+            <img src="{% static 'app/img/logos/contacto.png' %}" id="foto-contacto"alt="" />
+
+        </div>
+        <div class="formu col-md-6">
+            <div class="" id = "estilo-form">
+                <form id="contact-formulario" method="POST" action="#" class="contact-form">
+                    {% csrf_token %}
+                    {{ form |crispy }}
+                    <div class="form-group d-flex justify-content-center">
+                        <input type="reset" value="Limpiar" class="btn btn-secondary">
+                        &nbsp;    
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                {{mensaje}}
+            </div>
+        </div>
+    </div>
+
+{%endblock%}
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}
+

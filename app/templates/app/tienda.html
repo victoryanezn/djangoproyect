@@ -1,0 +1,54 @@
+{% extends 'app/base.html'%}
+
+{% load static%}
+{% block js%}
+
+{%endblock%}
+
+{% block css%}
+
+{%endblock%}
+
+{% load humanize %}
+
+{%block contenido%}
+<br><br>
+<div class="container px-4 px-lg-5 mt-5">
+    <h1 class="titulo text-center">Tienda</h1>
+    <hr>
+    <div class="row gx-4 gx-lg-5 row-cols-12 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        {% for p in productos %}
+        <div class=" mb-5">
+            <div class="card h-100 text-BLACK" id="card-fondo">
+                {% if p.imagen %}
+                <img class="card-img-top" src="{{ p.imagen.url }}" alt="imagen-producto" />
+                {% endif %}
+                <div class="card-body">
+                    <div class="text-center">
+                        <h5 class="fw-bolder">{{ p.marca | capfirst }}</h5>
+                        <h4>{{ p.nombre | title }}</h4>
+                        <h4>{{ p.color | title }}</h4>
+                        <p> {{ p.descripcion }} </p>
+                        <h4 class="fw-bolder">$ {{ p.precio | intcomma}}</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{%endblock%}
+
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}

@@ -1,0 +1,136 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{% block js%}
+
+{%endblock%}
+
+{% block css%}
+
+{%endblock%}
+
+{% block contenido%}
+
+<div class="container img-reglas">
+    <div>
+        <a href="#">
+            <img src="{% static 'app/img/logos/reglas.png' %}" class="img-fluid " alt="img-reglas">
+        </a>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="container containerreglas">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Reglas de Discord
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>🡆 Respeto mutuo entre todos los miembros.</li>
+                        <li>🡆 No se permite el uso de lenguaje ofensivo o insultos.</li>
+                        <li>🡆 Está prohibido el spam o publicidad no autorizada.</li>
+                        <li>🡆 No se permite compartir contenido inapropiado o NSFW.</li>
+                        <li>🡆 Evita discusiones sobre temas controvertidos (política, religión, etc.).</li>
+                        <li>🡆 Sigue las instrucciones de los moderadores y administradores.</li>
+                        <li>🡆 No compartir información personal sin consentimiento.</li>
+                        <li>🡆 Utiliza los canales apropiados para cada tipo de conversación.</li>
+                        <li>🡆 Reporta cualquier comportamiento inapropiado a los moderadores.</li>
+                        <li>🡆 Diviértete y mantén un ambiente amigable y acogedor.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Reglas del Modo Supervivencia
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>🡆 No está permitido el uso de hacks o mods que otorguen ventajas injustas.</li>
+                        <li>🡆 No se permite el griefeo o destrucción de construcciones de otros jugadores.</li>
+                        <li>🡆 El PvP está permitido solo en áreas designadas o con el consentimiento de ambos jugadores.</li>
+                        <li>🡆 No está permitido robar recursos o pertenencias de otros jugadores.</li>
+                        <li>🡆 Respeta el entorno y no construyas estructuras que causen lag o problemas al servidor.</li>
+                        <li>🡆 No abuses de bugs o glitches del juego.</li>
+                        <li>🡆 Sigue las instrucciones de los administradores y moderadores del servidor.</li>
+                        <li>🡆 Construye y juega de manera responsable, pensando en el bienestar de la comunidad.</li>
+                        <li>🡆 Participa en eventos y actividades del servidor de manera justa y deportiva.</li>
+                        <li>🡆 Reporta cualquier comportamiento inapropiado o infracciones a las reglas a los moderadores.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Reglas del Modo PvP
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>🡆 No está permitido el uso de hacks o mods que otorguen ventajas injustas en el combate.</li>
+                        <li>🡆 A tus oponentes, no insultes ni uses lenguaje ofensivo durante las partidas.</li>
+                        <li>🡆 Está permitido el teaming (aliarse con otros jugadores) en modos donde está prohibido.</li>
+                        <li>🡆 De manera justa y no abuses de bugs o glitches.</li>
+                        <li>🡆 El spawn-killing (matar jugadores recién aparecidos) en áreas de respawn.</li>
+                        <li>🡆 De manera deportiva y respeta las reglas de cada modalidad de PvP.</li>
+                        <li>🡆 Hagas trampas ni uses exploits para obtener ventajas.</li>
+                        <li>🡆 Las instrucciones de los moderadores y administradores del servidor.</li>
+                        <li>🡆 Cualquier comportamiento inapropiado o trampas a los moderadores.</li>
+                        <li>🡆 Y mantén un ambiente competitivo pero respetuoso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Reglas del Modo Skyblock
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>🡆 No está permitido el uso de hacks o mods que otorguen ventajas injustas.</li>
+                        <li>🡆 No robar recursos o pertenencias de otros jugadores.</li>
+                        <li>🡆 Construye de manera responsable, evitando estructuras que causen lag o problemas al servidor.</li>
+                        <li>🡆 No abuses de bugs o glitches del juego.</li>
+                        <li>🡆 El comercio de items debe ser justo y sin estafas.</li>
+                        <li>🡆 Respeta a los otros jugadores y sus islas.</li>
+                        <li>🡆 Sigue las instrucciones de los administradores y moderadores del servidor.</li>
+                        <li>🡆 Participa en eventos y actividades de Skyblock de manera justa y deportiva.</li>
+                        <li>🡆 Reporta cualquier comportamiento inapropiado o infracciones a las reglas a los moderadores.</li>
+                        <li>🡆 Disfruta del juego y contribuye a una comunidad amigable y cooperativa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+{%endblock%}
+
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}

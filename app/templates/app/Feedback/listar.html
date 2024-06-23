@@ -1,0 +1,84 @@
+{% extends 'app/base.html' %}
+
+{% block js %}
+
+<script>
+    function eliminar_feedback(id){
+        Swal.fire({
+            "title":"¿Estas seguro?",
+            "text": "Esta acción no se puede deshacer",
+            "icon":"question",
+            "showCancelButton":true,
+            "cancelButtonText": "No, Cancelar",
+            "confirmButtonText": "Si, Eliminar",
+            "reverseButtons": true,
+            "confirmButtonColor": "#dc3545",
+        })
+        .then(function(result){
+            if(result.isConfirmed){
+                window.location.href="/eliminar-feedback/"+id+"/"
+            }
+        })
+    }
+</script>
+
+{% endblock %}
+
+{% block contenido %}
+{% load humanize %}
+
+
+<br><br><br><br> <br><br>
+<div class="container ">
+    <div class="formu">
+        <div class="card-body">
+            <h2 class="text-dark text-center">Listado de Feedbacks</h2>
+            <hr class="text-dark">
+            <table class="table table-striped table-responsive  table-responsive">
+                <thead>
+                    <tr>
+                    <th>Fecha</th>
+                    <th>Autor</th>
+                    <th>Descipcion</th>
+
+                    {% if perms.app.change_feedback or perms.app.delete_feedback %}       
+                    <th>Opciones</th>
+                    {% endif%}
+                    </tr>
+                </thead>
+                <tbody >
+                    {% for p in feedbacks %}
+                    <tr>
+                    <td>{{ p.fecha_creado }}</td>
+                    <td>{{ p.autor | title }}</td>
+                    <td style="word-break: break-all; overflow-wrap: break-word;">{{ p.descripcion }}</td>
+                    <td>
+                        {% if perms.app.change_feedback %}
+                        <a href="{% url 'modificar_feedbacks' p.id %}" class="btn btn-info btn-sm">Modificar</a>
+                        {% endif %}
+                        {% if perms.app.delete_feedback %}
+                        <a href="#" onclick="eliminar_feedback({{p.id}})" class="btn btn-danger btn-sm">Eliminar</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}

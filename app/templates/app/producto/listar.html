@@ -1,0 +1,86 @@
+{% extends 'app/base.html' %}
+
+{% block js %}
+
+<script>
+    function eliminar_producto(id){
+        Swal.fire({
+            "title":"¿Estas seguro?",
+            "text": "Esta acción no se puede deshacer",
+            "icon":"question",
+            "showCancelButton":true,
+            "cancelButtonText": "No, Cancelar",
+            "confirmButtonText": "Si, Eliminar",
+            "reverseButtons": true,
+            "confirmButtonColor": "#dc3545",
+        })
+        .then(function(result){
+            if(result.isConfirmed){
+                window.location.href="/eliminar-producto/"+id+"/"
+            }
+        })
+    }
+</script>
+
+{% endblock %}
+
+{% block contenido %}
+{% load humanize %}
+
+
+<br><br><br><br> <br><br>
+<div class="container ">
+    <div class="formu">
+        <div class="card-body ">
+            <h2 class="text-dark text-center">Listado de Productos</h2>
+            <hr class="text-dark">
+            <table class="table table-striped table-hover table-responsive">
+                <thead>
+                    <tr>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+
+                    {% if perms.app.change_producto or perms.app.delete_producto %}       
+                    <th>Opciones</th>
+                    {% endif%}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in productos %}
+                    <tr>
+                    <td>{{ p.nombre | title }}</td>
+                    <td>{{ p.marca | title }}</td>
+                    <td>{{ p.precio | intcomma }}</td>
+                    <td>{{ p.descripcion }}</td>
+                    <td>
+
+                        {% if perms.app.change_producto %}
+                        <a href="{% url 'modificar_productos' p.id %}" class="btn btn-info btn-sm">Modificar</a>
+                        {% endif %}
+                        {% if perms.app.delete_producto %}
+                        <a href="#" onclick="eliminar_producto({{p.id}})" class="btn btn-danger btn-sm">Eliminar</a>
+                        {% endif %}
+                    </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+{% comment %} 
+----------------------------------
+            Chuly
+    GitHub: https://github.com/victoryanezn
+    Discord: chuly2005#0
+---------------------------------- 
+{% endcomment %}
